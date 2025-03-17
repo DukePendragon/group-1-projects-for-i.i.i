@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MNHS Programming and Troubleshooting Tutorials</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: auto;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #FFF;
+    }
+
+    header {
+      background-color: #7C93C3;
+      color: black;
+      text-align: center;
+      padding: 2rem 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    /* Tutorial Buttons Container */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Align vertically */
+      flex-wrap: wrap; /* Wrap items if screen is small */
+      gap: 10px; /* Add equal spacing */
+      max-width: 100%; /* Ensure full width */
+    }
+    
+    .box {
+      flex: 1; /* Distribute space equally */
+      min-width: 180px; /* Ensure boxes have a minimum width */
+      max-width: 200px; /* Prevent oversized boxes */
+      height: 100px; /* Set uniform height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: gray;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+      background-color: #;
+    }
+    
+    .troubleshooting {
+      width: 80%;
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .easy { background-color: #7C93C3; color: white !important; }
+    .basic { background-color: #55679C; color: white !important; }
+    .advanced { background-color: #00008B; color: white !important; }
+    .troubleshooting { background-color: #1E2A5E; color: white !important; margin-top: 20px; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #7C93C3;
+      color: black;
+    }
+
+    /* Dropdown Menu */
+    .menu-container {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      cursor: pointer;
+      background-color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-icon { font-size: 20px; margin-right: 3px; }
+    .menu-text { font-size: 12px; font-weight: bold; }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      left: 0;
+      top: 40px;
+      border-radius: 8px;
+      padding: 10px 0;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .dropdown-content a:hover { background-color: #ddd; }
+    .dropdown-content a:last-child { border-bottom: none; }
+    .show { display: block; }
+
+    /* Responsive Styles */
+    @media (min-width: 768px) {
+      .button-container {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .box {
+        width: auto;
+        padding: 20px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Privacy Policy Prompt -->
+  <div class="privacy-policy-container" id="privacy-policy">
+    <h3>Privacy Policy</h3>
+    <p>Before proceeding, you need to agree to our Privacy Policy.</p>
+    <p><a href="privacy_policy.html" class="privacy-policy-link" target="_blank">View Full Privacy Policy</a></p>
+    <label>
+      <input type="checkbox" id="agreeCheckbox"> I agree to the Privacy Policy
+    </label>
+    <br>
+    <button id="agreeButton" disabled>Agree</button>
+    <button id="disagreeButton">Disagree</button>
+  </div>
+
+  <!-- Header Content -->
+  <header id="header-content" style="display: none;">
+    <h1>MNHS Camaya Campus</h1>
+    <p>Programming and Troubleshooting Tutorials</p>
+  </header>
+
+  <!-- Content Container -->
+  <div class="container" id="main-content" style="display: none;">
+    <div class="button-container">
+      <a href="easy.html" style="text-decoration: none; color: inherit;" class="box easy" target="_blank">
+        <span>Easy Tutorials</span>
+      </a>
+      <a href="basic.html" style="text-decoration: none; color: inherit;" class="box basic" target="_blank">
+        <span>Basic Tutorials</span>
+      </a>
+      <a href="advanced.html" style="text-decoration: none; color: inherit;" class="box advanced" target="_blank">
+        <span>Advanced Tutorials</span>
+      </a>
+    </div>
+
+    <a href="troubleshooting.html" style="text-decoration: none; color: inherit;" class="box troubleshooting" target="_blank">
+      <span>Troubleshooting</span>
+    </a>
+  </div>
+
+  <!-- Updated Menu -->
+  <div class="menu-container" onclick="toggleMenu()">
+    <span class="menu-icon">☰</span>
+    <span class="menu-text"></span>
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="quiz_game.html">Quiz Game</a>
+      <a href="practice_coding.html">Practice Coding</a> 
+      <a href="about-us.html">About Us</a>
+      <a href="members.html">Members</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-content" style="display: none;">
+    <p>&copy; 2025 MNHS Camaya Campus | All Rights Reserved. |  <a href="privacy_policy.html" class="privacy-policy-link">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var dropdown = document.getElementById("dropdownMenu");
+      dropdown.classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.menu-container')) {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.classList.remove("show");
+      }
+    };
+
+    window.onload = function() {
+      var agreeCheckbox = document.getElementById('agreeCheckbox');
+      var agreeButton = document.getElementById('agreeButton');
+
+      if (localStorage.getItem('privacyPolicyAgreed') === 'true') {
+        document.getElementById('privacy-policy').style.display = 'none';
+        document.getElementById('header-content').style.display = 'block';
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('footer-content').style.display = 'block';
+      } else {
+        document.getElementById('privacy-policy').style.display = 'flex';
+      }
+
+      agreeCheckbox.addEventListener('change', function() {
+        agreeButton.disabled = !agreeCheckbox.checked;
+      });
+
+      agreeButton.addEventListener('click', function() {
+        localStorage.setItem('privacyPolicyAgreed', 'true');
+        document.getElementById('privacy-policy').style.display = 'none';
+        document.getElementById('header-content').style.display = 'block';
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('footer-content').style.display = 'block';
+      });
+    };
+  </script>
+</body>
+</html>

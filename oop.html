@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object-Oriented Programming (OOP)</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8e1;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff9800;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #ff9800;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .code-box {
+      background-color: #f9f9f9;
+      border-left: 4px solid #ff9800;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      color: #333;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #ff9800;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #ff9800;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Object-Oriented Programming (OOP)</h1>
+  </header>
+    <a href="index.html" class="back-link">← Back to Homepage</a>
+  <main>
+    <h2>What is OOP?</h2>
+    <p>
+      Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure software. It helps in organizing code, making it reusable, and reducing complexity.
+    </p>
+
+    <h2>Core Concepts of OOP</h2>
+    <ul>
+      <li><strong>Class:</strong> A blueprint for creating objects. It defines properties and behaviors.</li>
+      <li><strong>Object:</strong> An instance of a class that contains data and methods.</li>
+      <li><strong>Inheritance:</strong> A way to reuse existing code by creating new classes based on existing ones.</li>
+      <li><strong>Encapsulation:</strong> Hiding the internal details of an object and exposing only the necessary parts.</li>
+      <li><strong>Polymorphism:</strong> The ability to use a single interface for different underlying data types.</li>
+    </ul>
+
+    <h2>Example: A Simple OOP Program</h2>
+    <div class="code-box">
+      <strong>Python Example:</strong><br>
+      <code>
+        # Define a class<br>
+        class Animal:<br>
+        &nbsp;&nbsp;def __init__(self, name):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>
+        
+        &nbsp;&nbsp;def speak(self):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return f"{self.name} makes a sound"<br>
+        
+        # Create an object<br>
+        dog = Animal("Dog")<br>
+        print(dog.speak())  # Output: Dog makes a sound<br>
+      </code>
+    </div>
+
+    <h2>Steps to Implement OOP</h2>
+    <ul>
+      <li>Define a class using the <code>class</code> keyword.</li>
+      <li>Create objects from the class using its constructor.</li>
+      <li>Use methods and attributes of the class in your program.</li>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 MNHS Camaya Campus | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

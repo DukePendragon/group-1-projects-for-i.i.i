@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #17a2b8;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #17a2b8;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .code-box {
+      background-color: #f0f0f0;
+      border-left: 4px solid #17a2b8;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      color: #333;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #17a2b8;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #17a2b8;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Functions</h1>
+  </header>
+   <a href="index.html" class="back-link">← Back to Homepage</a>
+  <main>
+    <h2>What are Functions?</h2>
+    <p>
+      Functions are reusable blocks of code that perform specific tasks. They are essential for organizing your code, avoiding redundancy, and improving readability.
+    </p>
+
+    <h2>Example: Basic Function</h2>
+    <p>Here is how to write a basic function in JavaScript:</p>
+    <div class="code-box">
+      <strong>JavaScript:</strong><br>
+      <code>
+        function greet(name) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return "Hello, " + name + "!";<br>
+        }<br><br>
+        let message = greet("John");<br>
+        console.log(message);  // Output: Hello, John!
+      </code>
+    </div>
+
+    <h2>Why Use Functions?</h2>
+    <p>Functions help to break down large tasks into smaller, manageable pieces. They can also be reused multiple times, reducing code duplication and making your programs more efficient.</p>
+
+    <h2>Function with Return Value</h2>
+    <p>Here is how a function can return a value:</p>
+    <div class="code-box">
+      <strong>JavaScript:</strong><br>
+      <code>
+        function add(a, b) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+        }<br><br>
+        let result = add(5, 10);<br>
+        console.log(result);  // Output: 15
+      </code>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Learn Functions | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

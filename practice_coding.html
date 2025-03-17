@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Coding</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    h1 { text-align: center; }
+
+    /* Code Editor */
+    textarea {
+      width: 100%;
+      height: 300px;
+      font-family: monospace;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    /* Run Code Button */
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover { background-color: #218838; }
+
+    /* Output Section */
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      background: white;
+    }
+
+    /* Example Code Download Section */
+    .download-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .download-section a {
+      display: block;
+      text-decoration: none;
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      margin: 10px auto;
+      width: 200px;
+      border-radius: 5px;
+    }
+    .download-section a:hover { background: #0056b3; }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: green;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Practice Coding</h1>
+
+  <!-- Code Editor -->
+  <textarea id="codeEditor">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is a sample page.</p>
+</body>
+</html>
+  </textarea>
+
+  <!-- Run Code Button -->
+  <button onclick="runCode()">Run Code</button>
+  <a href="index.html" class="back-link">← Back to Homepage</a>
+
+  <!-- Output Preview -->
+  <iframe id="output"></iframe>
+
+  <script>
+    function runCode() {
+      var code = document.getElementById("codeEditor").value;
+      var iframe = document.getElementById("output").contentWindow.document;
+      iframe.open();
+      iframe.write(code);
+      iframe.close();
+    }
+  </script>
+
+  <!-- Example Code Downloads -->
+  <div class="download-section">
+    <h2>Download Example Codes</h2>
+    <a href="example1.html" download>Download Example 1</a>
+    <a href="example2.html" download>Download Example 2</a>
+  </div>
+</body>
+</html>

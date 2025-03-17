@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structures</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e3f2fd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffc107;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .code-box {
+      background-color: #f9f9f9;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      color: #333;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #ffc107;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #ffc107;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Structures</h1>
+  </header>
+    <a href="index.html" class="back-link">← Back to Homepage</a>
+  <main>
+    <h2>What are Data Structures?</h2>
+    <p>
+      Data structures are ways of organizing and storing data to perform operations efficiently. They are essential for solving complex problems in computer science and software development.
+    </p>
+
+    <h2>Advanced Data Structures</h2>
+    <ul>
+      <li><strong>Trees:</strong> A hierarchical structure used for storing data in a way that allows for efficient searching, insertion, and deletion.</li>
+      <li><strong>Graphs:</strong> A set of nodes connected by edges, used to represent relationships such as networks or paths.</li>
+      <li><strong>Heaps:</strong> A specialized tree-based structure used for implementing priority queues.</li>
+    </ul>
+
+    <h2>Example: Binary Search Tree (BST)</h2>
+    <div class="code-box">
+      <strong>Python Example:</strong><br>
+      <code>
+        class Node:<br>
+        &nbsp;&nbsp;def __init__(self, key):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;self.left = None<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;self.right = None<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;self.key = key<br><br>
+
+        # Inorder traversal<br>
+        def inorder(root):<br>
+        &nbsp;&nbsp;if root:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;inorder(root.left)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(root.key, end=" ")<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;inorder(root.right)<br><br>
+
+        # Insert a new node<br>
+        def insert(root, key):<br>
+        &nbsp;&nbsp;if root is None:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return Node(key)<br>
+        &nbsp;&nbsp;if key &lt; root.key:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;root.left = insert(root.left, key)<br>
+        &nbsp;&nbsp;else:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;root.right = insert(root.right, key)<br>
+        &nbsp;&nbsp;return root<br><br>
+
+        # Usage<br>
+        root = None<br>
+        root = insert(root, 50)<br>
+        root = insert(root, 30)<br>
+        root = insert(root, 70)<br>
+        inorder(root)  # Output: 30 50 70<br>
+      </code>
+    </div>
+
+    <h2>Steps to Master Data Structures</h2>
+    <ul>
+      <li>Understand the concept and use cases of each structure.</li>
+      <li>Practice implementing them in your preferred programming language.</li>
+      <li>Apply them to solve real-world problems and algorithms.</li>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 MNHS Camaya Campus | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
